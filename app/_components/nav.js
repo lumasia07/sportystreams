@@ -5,7 +5,7 @@ const menu_options = ['Livestream', 'Plans', 'Livescores', 'FAQs'];
 
 export default function Navbar() {
   return (
-    <div className='p-5 flex items-center'>
+    <div className='p-8 flex items-center'>
       <div className={`${radio.className} p-2`}>
         <h1>SportyStreams</h1>
       </div>
