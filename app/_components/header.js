@@ -9,7 +9,7 @@ export default function Header() {
         <h1 className="text-2xl md:text-6xl font-bold">
           <span className="text-[#FF2828]">I</span>
           <span className="text-white">t</span>
-          <span className="text-white">'s </span>
+          <span className="text-white">&apos;s </span>
           <span className="text-[#FF2828]">i</span>
           <span className="text-white">n </span>
           <span className="text-[#FF2828]">t</span>
