@@ -9,16 +9,20 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="p-4 flex items-center justify-between bg-[#061231] text-white">
+    <div className="p-4 flex items-center justify-between bg-[#0A1A2B] text-white">
       <div className={`${radio.className} p-2`}>
         <h1 className="text-2xl font-bold">SportyStreams</h1>
       </div>
       <div className="flex-grow flex justify-center">
-        <ul className="hidden md:flex space-x-6 list-none p-2">
-          {menu_options.map((option, index) => (
-            <li key={index} className="hover:text-[#FF2828] cursor-pointer">{option}</li>
-          ))}
-        </ul>
+        <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#061231]">
+          <ul className="flex space-x-6 list-none">
+            {menu_options.map((option, index) => (
+              <li key={index} className="hover:text-[#FF2828] cursor-pointer">
+                {option}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className="hidden md:flex space-x-4">
         <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Account</button>
@@ -30,16 +34,18 @@ export default function Navbar() {
         </svg>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-[#061231] shadow-md md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-[#0A1A2B] shadow-md md:hidden">
           <ul className="flex flex-col items-center space-y-4 p-4">
             {menu_options.map((option, index) => (
-              <li key={index} className="hover:text-[#FF2828] cursor-pointer">{option}</li>
+              <li key={index} className="hover:text-[#FF2828] cursor-pointer">
+                {option}
+              </li>
             ))}
             <li>
-              <button className="w-full hover:text-blue-300 cursor-pointer">Account</button>
+              <button className="hover:text-[#FF2828]">My Account</button>
             </li>
             <li>
-              <button className="hover:text-blue-300 cursor-pointer w-full">Login</button>
+              <button className="border-2 rounded-full text-white px-6 py-2  hover:text-[#FF2828] w-full">Login</button>
             </li>
           </ul>
         </div>
