@@ -21,8 +21,20 @@ export default function Header() {
           <span className="text-white">m</span>
           <span className="text-[#FF2828]">e</span>
         </h1>
+        <div className="mt-5">
+          <h2 className="text-sm md:text-4xl font-bold">
+            <span className="text-white">E</span>
+            <span className="text-[#B0183D]">njoy </span>
+            <span className="text-white">every </span>
+            <span className="text-white">r</span>
+            <span className="text-[#B0183D]">oyal</span>
+            <span className="text-white">e </span>
+            <span className="text-[#B0183D]">in </span>
+            <span className="text-white">full HD</span>
+          </h2>
+        </div> 
       </div>
-      <div className="ml-4 md:ml-40">
+      <div className="ml-4 md:ml-52">
         <Image 
           src="/saka.webp" 
           alt="Saka" 
