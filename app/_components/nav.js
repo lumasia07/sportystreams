@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <div className="p-4 flex items-center justify-between bg-[#061231] text-white">
-      <div className={`${radio.className} p-2`}>
+      <div className={`${radio.className} p-2 md:pl-20`}>
         <h1 className="text-xl md:text-2xl font-bold">SportyStreams</h1>
       </div>
       <div className="flex-grow flex justify-center">

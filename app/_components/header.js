@@ -5,8 +5,8 @@ const kodchasan = Kodchasan({ weight: ["400"], subsets: ["latin"] });
 export default function Header() {
   return (
     <main className="bg-[#061231] p-4">
-      <div className={`${kodchasan.className} w-1/3 p-12`}>
-        <h1 className="text-2xl md:text-6xl font-bold">
+      <div className={`${kodchasan.className} w-1/3 md:pl-8 md:m-10`}>
+        <h1 className="text-5xl md:text-6xl font-bold">
           <span className="text-[#FF2828]">I</span>
           <span className="text-white">t</span>
           <span className="text-white">&apos;s </span>
