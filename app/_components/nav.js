@@ -25,8 +25,8 @@ export default function Navbar() {
         </div>
       </div>
       <div className="hidden md:flex space-x-4">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Account</button>
-        <button className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Login</button>
+        <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#FF2828]">Account</button>
+        <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#FF2828]">Login</button>
       </div>
       <div className="md:hidden p-2 text-3xl cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
