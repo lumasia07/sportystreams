@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="p-4 flex items-center justify-between bg-[#0A1A2B] text-white">
+    <div className="p-4 flex items-center justify-between bg-[#061231] text-white">
       <div className={`${radio.className} p-2`}>
         <h1 className="text-xl md:text-2xl font-bold">SportyStreams</h1>
       </div>
