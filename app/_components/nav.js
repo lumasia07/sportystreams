@@ -24,7 +24,7 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="hidden md:flex space-x-4 mr-5">
+      <div className="hidden md:flex space-x-4 mr-14">
         <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#061231]">Account</button>
         {/* <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#061231]">Login</button> */}
       </div>
