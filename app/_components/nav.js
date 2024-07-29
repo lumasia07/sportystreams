@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div className="p-4 flex items-center justify-between bg-[#0A1A2B] text-white">
       <div className={`${radio.className} p-2`}>
-        <h1 className="text-2xl font-bold">SportyStreams</h1>
+        <h1 className="text-xl md:text-2xl font-bold">SportyStreams</h1>
       </div>
       <div className="flex-grow flex justify-center">
         <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#061231]">
@@ -45,7 +45,7 @@ export default function Navbar() {
               <button className="hover:text-[#FF2828]">My Account</button>
             </li>
             <li>
-              <button className="border-2 rounded-full text-white px-6 py-2  hover:text-[#FF2828] w-full">Login</button>
+              <button className="border-2 rounded-full text-white px-6 py-2 hover:text-[#FF2828] w-full">Login</button>
             </li>
           </ul>
         </div>
