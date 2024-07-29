@@ -14,7 +14,7 @@ export default function Navbar() {
         <h1 className="text-xl md:text-2xl font-bold">SportyStreams</h1>
       </div>
       <div className="flex-grow flex justify-center">
-        <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#061231] shadow-2xl">
+        <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#071842] shadow-2xl">
           <ul className="flex space-x-6 list-none">
             {menu_options.map((option, index) => (
               <li key={index} className="hover:text-[#FF2828] cursor-pointer">
@@ -34,7 +34,7 @@ export default function Navbar() {
         </svg>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-[#0A1A2B] shadow-md md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-[#061231] shadow-md md:hidden">
           <ul className="flex flex-col items-center space-y-4 p-4">
             {menu_options.map((option, index) => (
               <li key={index} className="hover:text-[#FF2828] cursor-pointer">
