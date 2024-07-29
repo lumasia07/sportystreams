@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className={`${radio.className} p-2`}>
         <h1 className="text-xl md:text-2xl font-bold">SportyStreams</h1>
       </div>
-      <div className="flex-grow flex justify-center">
+      <div className="flex-grow flex justify-center shadow-xl">
         <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#061231]">
           <ul className="flex space-x-6 list-none">
             {menu_options.map((option, index) => (
