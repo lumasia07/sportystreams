@@ -22,7 +22,7 @@ export default function Header() {
           <span className="text-[#FF2828]">e</span>
         </h1>
       </div>
-      <div className="ml-4 md:ml-24">
+      <div className="ml-4 md:ml-32">
         <Image 
           src="/saka.webp" 
           alt="Saka" 
