@@ -3,7 +3,7 @@ export default function Header() {
         <main className="bg-[#061231]">
             <div>
                 <p>
-                    it's in the game
+                    its in the game
                 </p>
             </div>
         </main>
