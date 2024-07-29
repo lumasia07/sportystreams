@@ -15,7 +15,7 @@ export default function Navbar() {
       </div>
       <div className="flex-grow flex justify-center">
         <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#071842] shadow-2xl">
-          <ul className="flex space-x-12 list-none">
+          <ul className="flex space-x-20 list-none">
             {menu_options.map((option, index) => (
               <li key={index} className="hover:text-[#FF2828] cursor-pointer">
                 {option}
