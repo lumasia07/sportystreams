@@ -28,7 +28,7 @@ export default function Navbar() {
         <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#FF2828]">Account</button>
         <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#FF2828]">Login</button>
       </div>
-      <div className="md:hidden p-2 text-3xl cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <div className="md:hidden bg-[#FF2828] p-2 text-3xl cursor-pointer rounded" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
           <path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>
         </svg>
