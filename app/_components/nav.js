@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from "react";
 import { Radio_Canada } from "next/font/google";
 
@@ -9,14 +9,14 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="p-4 flex items-center justify-between bg-white">
+    <div className="p-4 flex items-center justify-between bg-[#061231] text-white">
       <div className={`${radio.className} p-2`}>
         <h1 className="text-2xl font-bold">SportyStreams</h1>
       </div>
       <div className="flex-grow flex justify-center">
         <ul className="hidden md:flex space-x-6 list-none p-2">
           {menu_options.map((option, index) => (
-            <li key={index} className="hover:text-blue-500 cursor-pointer">{option}</li>
+            <li key={index} className="hover:text-blue-300 cursor-pointer">{option}</li>
           ))}
         </ul>
       </div>
@@ -30,16 +30,16 @@ export default function Navbar() {
         </svg>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-[#061231] shadow-md md:hidden">
           <ul className="flex flex-col items-center space-y-4 p-4">
             {menu_options.map((option, index) => (
-              <li key={index} className="hover:text-blue-500 cursor-pointer">{option}</li>
+              <li key={index} className="hover:text-blue-300 cursor-pointer">{option}</li>
             ))}
             <li>
-              <button className="w-full hover:text-blue-500 cursor-pointer">Account</button>
+              <button className="w-full hover:text-blue-300 cursor-pointer">Account</button>
             </li>
             <li>
-              <button className="hover:text-blue-500 cursor-pointer w-full">Login</button>
+              <button className="hover:text-blue-300 cursor-pointer w-full">Login</button>
             </li>
           </ul>
         </div>
