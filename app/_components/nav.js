@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="flex-grow flex justify-center">
         <ul className="hidden md:flex space-x-6 list-none p-2">
           {menu_options.map((option, index) => (
-            <li key={index} className="hover:text-blue-300 cursor-pointer">{option}</li>
+            <li key={index} className="hover:text-[#FF2828] cursor-pointer">{option}</li>
           ))}
         </ul>
       </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="absolute top-16 left-0 w-full bg-[#061231] shadow-md md:hidden">
           <ul className="flex flex-col items-center space-y-4 p-4">
             {menu_options.map((option, index) => (
-              <li key={index} className="hover:text-blue-300 cursor-pointer">{option}</li>
+              <li key={index} className="hover:text-[#FF2828] cursor-pointer">{option}</li>
             ))}
             <li>
               <button className="w-full hover:text-blue-300 cursor-pointer">Account</button>
