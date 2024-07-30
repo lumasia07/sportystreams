@@ -12,8 +12,16 @@ export default function Plans() {
                 </div>
                 <div className="border-t-4 rounded-lg w-2/5 mr-4 md:mr-24"></div>
             </div>
-            <div className="border m-12 p-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-500">
-                Here are the plans 
+            <div className="mt-12 flex flex-col md:flex-row md:justify-center gap-4">
+                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[150px] text-center">
+                    lite
+                </div>
+                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[150px] text-center">
+                    basic
+                </div>
+                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[150px] text-center">
+                    premium
+                </div>
             </div>
         </div>
     );
