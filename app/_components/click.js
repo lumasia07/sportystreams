@@ -1,7 +1,33 @@
+"use client";
+
+import { useEffect } from "react";
+
 export default function Clickme() {
+    useEffect(() => {
+        const handleScroll = () => {
+            const video = document.querySelector("video");
+            if (video) {
+                const offset = window.scrollY;
+                video.style.transform = `translateY(${offset * 0.5}px)`;
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <div className="flex justify-center my-3">
-            <button className="flex items-center border-2 px-5 py-2 border-black">
+        <div className="relative flex justify-center items-center h-screen overflow-hidden">
+            <video
+                autoPlay
+                loop
+                muted
+                className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+                <source src="vid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <button className="relative z-10 flex items-center border-2 px-5 py-2 border-white bg-black bg-opacity-50 text-white">
                 Click to watch
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
