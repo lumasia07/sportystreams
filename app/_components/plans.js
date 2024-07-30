@@ -12,14 +12,14 @@ export default function Plans() {
                 </div>
                 <div className="border-t-4 rounded-lg w-2/5 mr-4 md:mr-24"></div>
             </div>
-            <div className="mt-12 flex flex-col md:flex-row md:justify-center gap-4">
-                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[150px] text-center">
+            <div className="my-12 flex flex-col md:flex-row md:justify-center gap-4">
+                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
                     lite
                 </div>
-                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[150px] text-center">
+                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
                     basic
                 </div>
-                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[150px] text-center">
+                <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
                     premium
                 </div>
             </div>
