@@ -3,8 +3,8 @@ export default function Footer() {
         <footer className="bg-[#061231] text-white py-8">
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
                 <div className="mb-4 md:mb-0">
-                    <h1 className="text-2xl md:text-3xl font-bold sm:flex justify-center">SportyStreams</h1>
-                    <p className="text-sm mt-2">© 2024 SportyStreams. All rights reserved.</p>
+                    <h1 className="text-2xl md:text-3xl font-bold flex justify-center">SportyStreams</h1>
+                    <p className="text-sm mt-2 ml-12">© 2024 SportyStreams. All rights reserved.</p>
                 </div>
                 <div className="flex space-x-6 mb-4 md:mb-0">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
