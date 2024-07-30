@@ -2,6 +2,7 @@ import Navbar from "./_components/nav";
 import Header from "./_components/header";
 import Plans from "./_components/plans";
 import Clickme from "./_components/click";
+import Footer from "./_components/footer";
 
 export default function Homepage() {
     return (
@@ -10,6 +11,7 @@ export default function Homepage() {
           <Header />
           <Plans />
           <Clickme />
+          <Footer />
         </>
     );
 }
