@@ -1,5 +1,7 @@
 export default function Footer() {
     return (
-        <p>Initial</p>
+        <div className="bg-[#061231]">
+            <p>Initial</p>
+        </div>
     );
 }
