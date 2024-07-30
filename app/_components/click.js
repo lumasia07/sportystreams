@@ -1,21 +1,4 @@
-"use client";
-
-import { useEffect } from "react";
-
 export default function Clickme() {
-    useEffect(() => {
-        const handleScroll = () => {
-            const video = document.querySelector("video");
-            if (video) {
-                const offset = window.scrollY;
-                video.style.transform = `translateY(${offset * 0.5}px)`;
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return (
         <div className="relative flex justify-center items-center h-screen overflow-hidden">
             <video
