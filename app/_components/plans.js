@@ -14,7 +14,13 @@ export default function Plans() {
             </div>
             <div className="my-12 flex flex-col md:flex-row md:justify-center gap-4">
                 <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
-                    lite
+                  <div className="flex gap-20">
+                    <h1 className="text-2xl font-semibold">lite</h1>
+                    <div className="mt-1 border-2 rounded-full px-2">
+                        <h1 className="font-bold">720p</h1>
+                    </div>
+                  </div>
+                  <div><h1 className="font-bold text-3xl mt-2">KES 299</h1></div>
                 </div>
                 <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
                     basic
