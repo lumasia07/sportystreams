@@ -15,8 +15,8 @@ const PlanCard = ({ title, quality, price, features }) => (
     <div className="mt-3 flex gap-2">
       {features.map((feature, index) => (
         <React.Fragment key={index}>
-          {index > 0 && <div className="mt-5"><h1 className="text-4xl font-bold">+</h1></div>}
-          <div className="mt-3">
+          {index > 0 && <div className="mt-5" key={`plus-${index}`}><h1 className="text-4xl font-bold">+</h1></div>}
+          <div className="mt-3" key={`feature-${index}`}>
             {feature}
           </div>
         </React.Fragment>
@@ -45,9 +45,9 @@ const TVIcon = () => (
 
 export default function Plans() {
   const plans = [
-    { title: "lite", quality: "720p", price: "299", features: [<PhoneIcon />] },
-    { title: "basic", quality: "1080p", price: "499", features: [<PhoneIcon />, <PCIcon />] },
-    { title: "premium", quality: "4K", price: "799", features: [<PhoneIcon />, <PCIcon />, <TVIcon />] },
+    { title: "lite", quality: "720p", price: "299", features: [<PhoneIcon key="phone" />] },
+    { title: "basic", quality: "1080p", price: "499", features: [<PhoneIcon key="phone" />, <PCIcon key="pc" />] },
+    { title: "premium", quality: "4K", price: "799", features: [<PhoneIcon key="phone" />, <PCIcon key="pc" />, <TVIcon key="tv" />] },
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function Plans() {
       </div>
       <div className="my-12 flex flex-col md:flex-row md:justify-center gap-4">
         {plans.map((plan, index) => (
-          <PlanCard key={index} {...plan} />
+          <PlanCard key={`plan-${index}`} {...plan} />
         ))}
       </div>
     </div>
