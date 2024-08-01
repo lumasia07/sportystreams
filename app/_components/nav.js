@@ -14,8 +14,8 @@ export default function Navbar() {
         <h1 className="text-2xl md:text-3xl font-bold">SportyStreams</h1>
       </div>
       <div className="flex-grow hidden md:flex justify-center">
-        <div className="border border-[#061231] rounded-md py-6 px-8 bg-[#071842] shadow-2xl">
-          <ul className="flex space-x-8 list-none text-sm md:text-base">
+        <div className="border border-[#061231] rounded-md py-6 px-8 bg-[#071842] shadow-md">
+          <ul className="flex space-x-12 list-none text-sm md:text-base">
             {menu_options.map((option, index) => (
               <li key={index} className="hover:text-[#FF2828] cursor-pointer transition-colors duration-200">
                 {option}
