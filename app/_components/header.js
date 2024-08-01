@@ -18,7 +18,7 @@ export default function Header() {
     <main className="bg-[#061231] p-4 flex items-center">
       <div className={`${kodchasan.className} w-1/3 md:pl-8 md:m-10`}>
         <h1 className="text-5xl md:text-6xl font-bold">
-          <ColoredText colors={["#FF2828", null, null, "#FF2828", null, "#FF2828", null, null, "#FF2828"]}>
+          <ColoredText colors={["#B0183D", null, null, "#B0183D", null, "#B0183D", null, null, "#B0183D"]}>
             {"It's in the game"}
           </ColoredText>
         </h1>
