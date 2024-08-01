@@ -10,23 +10,24 @@ export default function Navbar() {
 
   return (
     <div className="p-4 flex items-center justify-between bg-[#061231] text-white">
-      <div className={`${radio.className} p-2 md:pl-20`}>
-        <h1 className="text-xl md:text-2xl font-bold">SportyStreams</h1>
+      <div className={`${radio.className} pl-2 md:pl-20`}>
+        <h1 className="text-2xl md:text-3xl font-bold">SportyStreams</h1>
       </div>
-      <div className="flex-grow flex justify-center">
-        <div className="hidden md:flex border border-[#061231] rounded-md p-7 bg-[#071842] shadow-2xl">
-          <ul className="flex space-x-20 list-none">
+      <div className="flex-grow hidden md:flex justify-center">
+        <div className="border border-[#061231] rounded-md py-4 px-10 bg-[#071842] shadow-2xl">
+          <ul className="flex space-x-12 list-none">
             {menu_options.map((option, index) => (
-              <li key={index} className="hover:text-[#FF2828] cursor-pointer">
+              <li key={index} className="hover:text-[#FF2828] cursor-pointer transition-colors duration-200">
                 {option}
               </li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="hidden md:flex space-x-4 mr-14">
-        <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#061231]">Account</button>
-        {/* <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#061231]">Login</button> */}
+      <div className="hidden md:flex space-x-6 mr-16">
+        <button className="border-2 text-white px-6 py-2 rounded-full hover:bg-[#FF2828] transition-all duration-200">
+          Account
+        </button>
       </div>
       <div className="md:hidden bg-[#FF2828] p-2 text-3xl cursor-pointer rounded" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
@@ -37,7 +38,7 @@ export default function Navbar() {
         <div className="absolute top-16 left-0 w-full bg-[#061231] shadow-md md:hidden">
           <ul className="flex flex-col items-center space-y-4 p-4">
             {menu_options.map((option, index) => (
-              <li key={index} className="hover:text-[#FF2828] cursor-pointer">
+              <li key={index} className="hover:text-[#FF2828] cursor-pointer transition-colors duration-200">
                 {option}
               </li>
             ))}
@@ -45,7 +46,9 @@ export default function Navbar() {
               <button className="hover:text-[#FF2828]">My Account</button>
             </li>
             <li>
-              <button className="border-2 rounded-full text-white px-6 py-2 hover:text-[#FF2828] w-full">Login</button>
+              <button className="border-2 rounded-full text-white px-6 py-2 hover:text-[#FF2828] w-full">
+                Login
+              </button>
             </li>
           </ul>
         </div>
