@@ -3,34 +3,30 @@ import Image from "next/image";
 
 const kodchasan = Kodchasan({ weight: ["400"], subsets: ["latin"] });
 
+const ColoredText = ({ children, colors }) => (
+  <>
+    {children.split("").map((char, index) => (
+      <span key={index} className={colors[index] ? `text-[${colors[index]}]` : "text-white"}>
+        {char}
+      </span>
+    ))}
+  </>
+);
+
 export default function Header() {
   return (
     <main className="bg-[#061231] p-4 flex items-center">
       <div className={`${kodchasan.className} w-1/3 md:pl-8 md:m-10`}>
         <h1 className="text-5xl md:text-6xl font-bold">
-          <span className="text-[#FF2828]">I</span>
-          <span className="text-white">t</span>
-          <span className="text-white">&apos;s </span>
-          <span className="text-[#FF2828]">i</span>
-          <span className="text-white">n </span>
-          <span className="text-[#FF2828]">t</span>
-          <span className="text-white">h</span>
-          <span className="text-white">e </span>
-          <span className="text-[#FF2828]">g</span>
-          <span className="text-white">a</span>
-          <span className="text-white">m</span>
-          <span className="text-[#FF2828]">e</span>
+          <ColoredText colors={["#FF2828", null, null, "#FF2828", null, "#FF2828", null, null, "#FF2828"]}>
+            {"It's in the game"}
+          </ColoredText>
         </h1>
         <div className="mt-5">
           <h2 className="text-sm md:text-4xl font-bold">
-            <span className="text-white">E</span>
-            <span className="text-[#B0183D]">njoy </span>
-            <span className="text-white">every </span>
-            <span className="text-white">r</span>
-            <span className="text-[#B0183D]">oyal</span>
-            <span className="text-white">e </span>
-            <span className="text-[#B0183D]">in </span>
-            <span className="text-white">full HD</span>
+            <ColoredText colors={[null, "#B0183D", null, null, "#B0183D", null, "#B0183D"]}>
+              {"Enjoy every royale in full HD"}
+            </ColoredText>
           </h2>
         </div> 
       </div>
