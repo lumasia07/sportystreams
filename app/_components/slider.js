@@ -11,6 +11,13 @@ const Slider = ({ plans }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  const handleSwiper = (swiper) => {
+    swiper.params.navigation.prevEl = prevRef.current;
+    swiper.params.navigation.nextEl = nextRef.current;
+    swiper.navigation.init();
+    swiper.navigation.update();
+  };
+
   return (
     <div className="relative">
       <Swiper
@@ -28,16 +35,7 @@ const Slider = ({ plans }) => {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
-        }}
+        onSwiper={handleSwiper}
       >
         {plans.map((plan, index) => (
           <SwiperSlide key={index} style={{ width: '300px' }}>
@@ -74,6 +72,7 @@ const Slider = ({ plans }) => {
         </svg>
       </div>
     </div>
-)};
+  );
+};
 
 export default Slider;
