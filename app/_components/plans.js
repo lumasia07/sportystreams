@@ -1,6 +1,6 @@
 import React from 'react';
 import { Kodchasan } from "next/font/google";
-import Slider from './slider'; // Import the Slider component
+import Slider from './slider';
 
 const kodchasan = Kodchasan({ weight: ["400"], subsets: ["latin"] });
 

@@ -1,10 +1,7 @@
-// app/_components/slider.js
 "use client";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -18,6 +15,7 @@ const Slider = ({ plans }) => {
       grabCursor={true}
       centeredSlides={true}
       slidesPerView={'auto'}
+      initialSlide={1}
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
