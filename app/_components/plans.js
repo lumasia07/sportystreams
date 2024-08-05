@@ -4,7 +4,7 @@ import Slider from './slider'; // Import the Slider component
 
 const kodchasan = Kodchasan({ weight: ["400"], subsets: ["latin"] });
 
-const PlanCard = ({ title, quality, price, features }) => (
+export const PlanCard = ({ title, quality, price, features }) => (
   <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
     <div className="flex justify-between">
       <h1 className="text-2xl font-semibold">{title}</h1>

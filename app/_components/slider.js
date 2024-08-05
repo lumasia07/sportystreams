@@ -1,32 +1,35 @@
+// app/_components/slider.js
 "use client";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 const Slider = ({ plans }) => {
   return (
     <Swiper
-      modules={[Navigation, Pagination]}
-      spaceBetween={30}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
+      modules={[Navigation, Pagination, EffectCoverflow]}
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView={'auto'}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
       }}
+      pagination={{ clickable: true }}
+      navigation
     >
       {plans.map((plan, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} style={{ width: '300px' }}>
           <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex-1 min-w-[250px] min-h-[200px]">
             <div className="flex justify-between">
               <h1 className="text-2xl font-semibold">{plan.title}</h1>
