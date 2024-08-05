@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
@@ -10,13 +10,16 @@ import 'swiper/css/effect-coverflow';
 const Slider = ({ plans }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const swiperRef = useRef(null);
 
-  const handleSwiper = (swiper) => {
-    swiper.params.navigation.prevEl = prevRef.current;
-    swiper.params.navigation.nextEl = nextRef.current;
-    swiper.navigation.init();
-    swiper.navigation.update();
-  };
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.params.navigation.prevEl = prevRef.current;
+      swiperRef.current.params.navigation.nextEl = nextRef.current;
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+    }
+  }, []);
 
   return (
     <div className="relative">
@@ -35,7 +38,11 @@ const Slider = ({ plans }) => {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        onSwiper={handleSwiper}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         {plans.map((plan, index) => (
           <SwiperSlide key={index} style={{ width: '300px' }}>
