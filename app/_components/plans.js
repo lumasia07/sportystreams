@@ -1,5 +1,6 @@
 import React from 'react';
 import { Kodchasan } from "next/font/google";
+import Slider from './slider'; // Import the Slider component
 
 const kodchasan = Kodchasan({ weight: ["400"], subsets: ["latin"] });
 
@@ -59,10 +60,8 @@ export default function Plans() {
         </div>
         <div className="border-t-4 rounded-lg w-2/5 mr-4 md:mr-24" />
       </div>
-      <div className="my-12 flex flex-col md:flex-row md:justify-center gap-4">
-        {plans.map((plan, index) => (
-          <PlanCard key={`plan-${index}`} {...plan} />
-        ))}
+      <div className="my-12 w-full px-4 md:px-24">
+        <Slider plans={plans} />
       </div>
     </div>
   );
