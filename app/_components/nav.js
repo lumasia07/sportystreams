@@ -35,7 +35,7 @@ export default function Navbar() {
         </svg>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-16 right-14 w-1/3 bg-gradient-to-r from-red-600 to-pink-600 shadow-lg md:hidden rounded-lg">
+        <div className="absolute top-16 right-14 w-2/5 bg-gradient-to-r from-red-600 to-pink-600 shadow-lg md:hidden rounded-lg">
           <ul className="flex flex-col items-center space-y-4 p-4">
             {menu_options.map((option, index) => (
               <li key={index} className="hover:text-[#FF2828] cursor-pointer transition-colors duration-200">
