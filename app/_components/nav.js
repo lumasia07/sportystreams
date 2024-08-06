@@ -1,12 +1,15 @@
 'use client';
 import { useState } from "react";
 import { Radio_Canada } from "next/font/google";
+import { animated } from '@react-spring/web';
+import { useMenuAnimation } from './nav_animation';
 
 const radio = Radio_Canada({ subsets: ["latin"] });
 const menu_options = ['Livestream', 'Plans', 'Livescores', 'FAQs'];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuAnimation = useMenuAnimation(isMenuOpen);
 
   return (
     <div className="p-4 flex items-center justify-between bg-[#061231] text-white">
@@ -34,25 +37,26 @@ export default function Navbar() {
           <path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>
         </svg>
       </div>
-      {isMenuOpen && (
-        <div className="absolute top-16 right-2 w-3/5 bg-gradient-to-r from-red-600 to-pink-600 shadow-lg md:hidden rounded-lg">
-          <ul className="flex flex-col items-center space-y-4 p-4">
-            {menu_options.map((option, index) => (
-              <li key={index} className="hover:text-[#FF2828] cursor-pointer transition-colors duration-200">
-                {option}
-              </li>
-            ))}
-            <li>
-              <button className="hover:text-[#FF2828]">My Account</button>
+      <animated.div 
+        style={menuAnimation} 
+        className="absolute top-16 right-2 w-3/5 bg-gradient-to-r from-red-600 to-pink-600 shadow-lg md:hidden rounded-lg"
+      >
+        <ul className="flex flex-col items-center space-y-4 p-4">
+          {menu_options.map((option, index) => (
+            <li key={index} className="hover:text-[#FF2828] cursor-pointer transition-colors duration-200">
+              {option}
             </li>
-            <li>
-              <button className="border-2 rounded-full text-white px-6 py-2 hover:text-[#FF2828] w-full">
-                Login
-              </button>
-            </li>
-          </ul>
-        </div>
-      )}
+          ))}
+          <li>
+            <button className="hover:text-[#FF2828]">My Account</button>
+          </li>
+          <li>
+            <button className="border-2 rounded-full text-white px-6 py-2 hover:text-[#FF2828] w-full">
+              Login
+            </button>
+          </li>
+        </ul>
+      </animated.div>
     </div>
   );
 }
