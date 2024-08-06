@@ -3,6 +3,7 @@ import Header from "./_components/header";
 import Plans from "./_components/plans";
 import Clickme from "./_components/click";
 import Footer from "./_components/footer";
+import Testimonials from "./_components/testimonials";
 
 export default function Homepage() {
     return (
@@ -11,6 +12,7 @@ export default function Homepage() {
           <Header />
           <Plans />
           <Clickme />
+          <Testimonials />
           <Footer />
         </>
     );
